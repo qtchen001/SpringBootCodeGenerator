@@ -215,14 +215,14 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h2>Spring Boot Code Generator!</h2>
-        <p class="lead">
-            √基于SpringBoot2+Freemarker的<a class="lead" href="https://github.com/moshowgame/SpringBootCodeGenerator">代码生成器</a><br>
-            √以解放双手为目的，减少大量重复的CRUD工作<br>
-            √支持mysql/oracle/pgsql三大数据库<br>
-            √用DDL-SQL语句生成JPA/JdbcTemplate/Mybatis/MybatisPlus/BeetlSQL相关代码。<br>
-            如果发现有SQL语句不能识别，请<a href="https://github.com/moshowgame/SpringBootCodeGenerator/issues">留言</a>，同时欢迎大家提<a href="https://github.com/moshowgame/SpringBootCodeGenerator/pulls">PR</a>和<a href="#" id="donate1">赞赏</a>，谢谢！<a id="version" href="#">查看版本</a>
-        </p>
+<#--        <h2>Spring Boot Code Generator!</h2>-->
+<#--        <p class="lead">-->
+<#--            √基于SpringBoot2+Freemarker的<a class="lead" href="https://github.com/moshowgame/SpringBootCodeGenerator">代码生成器</a><br>-->
+<#--            √以解放双手为目的，减少大量重复的CRUD工作<br>-->
+<#--            √支持mysql/oracle/pgsql三大数据库<br>-->
+<#--            √用DDL-SQL语句生成JPA/JdbcTemplate/Mybatis/MybatisPlus/BeetlSQL相关代码。<br>-->
+<#--            如果发现有SQL语句不能识别，请<a href="https://github.com/moshowgame/SpringBootCodeGenerator/issues">留言</a>，同时欢迎大家提<a href="https://github.com/moshowgame/SpringBootCodeGenerator/pulls">PR</a>和<a href="#" id="donate1">赞赏</a>，谢谢！<a id="version" href="#">查看版本</a>-->
+<#--        </p>-->
         <div id="donate" class="container" show="no"></div>
         <hr>
         <div class="input-group mb-3">
@@ -395,6 +395,25 @@ CREATE TABLE 'userinfo' (
                     <button type="button" class="btn btn-default generator" id="mybatis">ibatisXml</button>
                     <button type="button" class="btn btn-default generator" id="mapper">mapper</button>
                     <button type="button" class="btn btn-default generator" id="mapper2">mapper2</button>
+                    <button type="button" class="btn btn-default generator" id="service">service</button>
+                    <button type="button" class="btn btn-default generator" id="service_impl">serviceImpl</button>
+                    <button type="button" class="btn btn-default generator" id="controller">controller</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+            <div class="btn-toolbar col-md-7" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="btn btn-secondary disabled setWidth" id="btnGroupAddon">Cloud</div>
+                    </div>
+                </div>
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-default generator" id="model">model</button>
+                    <button type="button" class="btn btn-default generator" id="provider">provider</button>
+                    <button type="button" class="btn btn-default generator" id="mapper">mapper</button>
+                    <button type="button" class="btn btn-default generator" id="entity">entity</button>
                     <button type="button" class="btn btn-default generator" id="service">service</button>
                     <button type="button" class="btn btn-default generator" id="service_impl">serviceImpl</button>
                     <button type="button" class="btn btn-default generator" id="controller">controller</button>

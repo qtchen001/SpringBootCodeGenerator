@@ -10,10 +10,7 @@ import com.softdev.system.generator.entity.ParamInfo;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +20,20 @@ import java.util.regex.Pattern;
  * @author zhengkai.blog.csdn.net
  */
 public class TableParseUtil {
+
+    private static final List<String> skipColumn = new ArrayList<>();
+
+    static {
+        skipColumn.add("id");
+        skipColumn.add("owner_id");
+        skipColumn.add("property_bag");
+        skipColumn.add("version");
+        skipColumn.add("comment");
+        skipColumn.add("created_by_id");
+        skipColumn.add("updated_by_id");
+        skipColumn.add("create_time");
+        skipColumn.add("update_time");
+    }
 
     /**
      * 解析DDL SQL生成类信息
@@ -281,6 +292,9 @@ public class TableParseUtil {
                     fieldInfo.setFieldClass(fieldClass);
                     fieldInfo.setFieldComment(fieldComment);
 
+                    if (skipColumn.contains(columnName)) {
+                        continue;
+                    }
                     fieldList.add(fieldInfo);
                 }
             }

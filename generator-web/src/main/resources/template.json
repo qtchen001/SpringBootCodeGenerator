@@ -160,5 +160,47 @@
     "name": "sql",
     "group": "util",
     "description": "sql"
+  },
+  {
+    "id": "74",
+    "name": "controller",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "75",
+    "name": "entity",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "76",
+    "name": "mapper",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "77",
+    "name": "model",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "78",
+    "name": "provider",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "79",
+    "name": "service",
+    "group": "cloud",
+    "description": "cloud"
+  },
+  {
+    "id": "80",
+    "name": "service_impl",
+    "group": "cloud",
+    "description": "cloud"
   }
 ]

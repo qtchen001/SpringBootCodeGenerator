@@ -23,4 +23,76 @@ public class ParamInfo {
         public static String UNDER_SCORE_CASE="UnderScoreCase";
         public static String UPPER_UNDER_SCORE_CASE="UpperUnderScoreCase";
     }
+
+    public String getTableSql() {
+        return tableSql;
+    }
+
+    public ParamInfo setTableSql(String tableSql) {
+        this.tableSql = tableSql;
+        return this;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public ParamInfo setAuthorName(String authorName) {
+        this.authorName = authorName;
+        return this;
+    }
+
+    public String getPackageName() {
+        return packageName;
+    }
+
+    public ParamInfo setPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+
+    public String getReturnUtil() {
+        return returnUtil;
+    }
+
+    public ParamInfo setReturnUtil(String returnUtil) {
+        this.returnUtil = returnUtil;
+        return this;
+    }
+
+    public String getNameCaseType() {
+        return nameCaseType;
+    }
+
+    public ParamInfo setNameCaseType(String nameCaseType) {
+        this.nameCaseType = nameCaseType;
+        return this;
+    }
+
+    public String getTinyintTransType() {
+        return tinyintTransType;
+    }
+
+    public ParamInfo setTinyintTransType(String tinyintTransType) {
+        this.tinyintTransType = tinyintTransType;
+        return this;
+    }
+
+    public String getDataType() {
+        return dataType;
+    }
+
+    public ParamInfo setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+
+    public boolean isSwagger() {
+        return swagger;
+    }
+
+    public ParamInfo setSwagger(boolean swagger) {
+        this.swagger = swagger;
+        return this;
+    }
 }

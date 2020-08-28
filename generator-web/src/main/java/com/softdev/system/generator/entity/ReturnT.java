@@ -62,4 +62,64 @@ public class ReturnT implements Serializable {
 	public static ReturnT ERROR(){
 		return new ReturnT(FAIL_CODE,OBJECT_NOT_FOUND);
 	}
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public static int getSuccessCode() {
+		return SUCCESS_CODE;
+	}
+
+	public static int getFailCode() {
+		return FAIL_CODE;
+	}
+
+	public static int getPageCode() {
+		return PAGE_CODE;
+	}
+
+	public static String getObjectNotFound() {
+		return OBJECT_NOT_FOUND;
+	}
+
+	public static String getOperationSuccess() {
+		return OPERATION_SUCCESS;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public ReturnT setCode(int code) {
+		this.code = code;
+		return this;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public ReturnT setMsg(String msg) {
+		this.msg = msg;
+		return this;
+	}
+
+	public Object getData() {
+		return data;
+	}
+
+	public ReturnT setData(Object data) {
+		this.data = data;
+		return this;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public ReturnT setCount(int count) {
+		this.count = count;
+		return this;
+	}
 }
