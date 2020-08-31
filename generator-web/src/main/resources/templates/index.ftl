@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SQL转Java JPA、MYBATIS实现类代码生成平台</title>
-    <meta name="keywords" content="sql转实体类,sql转DAO,SQL转service,SQL转JPA实现,SQL转MYBATIS实现">
+    <title>代码生成平台</title>
+    <meta name="keywords" content="代码生成平台">
 
     <#import "common/common-import.ftl" as netCommon>
     <@netCommon.commonStyle />
@@ -11,7 +11,7 @@
 
 <script>
 
-    <@netCommon.viewerCounter />
+<#--    <@netCommon.viewerCounter />-->
 
     $(function () {
         /**
@@ -149,53 +149,53 @@
                 genCodeArea.setSize('auto', 'auto');
             }
         });
-        /**
-         * 捐赠
-         */
-        function donate(){
-            if($("#donate").attr("show")=="no"){
-                $("#donate").html('<img src="https://raw.githubusercontent.com/moshowgame/SpringBootCodeGenerator/master/donate.png"></img>');
-                $("#donate").attr("show","yes");
-            }else{
-                $("#donate").html('<p>谢谢赞赏！</p>');
-                $("#donate").attr("show","no");
-            }
-        }
-        $('#donate1').on('click', function(){
-            donate();
-        });
-        $('#donate2').on('click', function(){
-            donate();
-        });
-        $('#btnCopy').on('click', function(){
-            if(!$.isEmptyObject(genCodeArea.getValue())&&!$.isEmptyObject(navigator)&&!$.isEmptyObject(navigator.clipboard)){
-                navigator.clipboard.writeText(genCodeArea.getValue());
-                $.toast("√ 复制成功");
-            }
-        });
-
-        function getVersion(){
-            var gitVersion ;
-            $.ajax({
-                type: 'GET',
-                url: "https://raw.githubusercontent.com/moshowgame/SpringBootCodeGenerator/master/generator-web/src/main/resources/static/version.json",
-                dataType: "json",
-                success: function (data) {
-                    gitVersion = data.version;
-                    $.ajax({
-                        type: 'GET',
-                        url: base_url + "/static/version.json",
-                        dataType: "json",
-                        success: function (data) {
-                            $.toast("#当前版本:"+data.version+" | github:"+gitVersion);
-                        }
-                    });
-                }
-            });
-        }
-        $('#version').on('click', function(){
-            getVersion();
-        });
+        // /**
+        //  * 捐赠
+        //  */
+        // function donate(){
+        //     if($("#donate").attr("show")=="no"){
+        //         $("#donate").html('<img src="https://raw.githubusercontent.com/moshowgame/SpringBootCodeGenerator/master/donate.png"></img>');
+        //         $("#donate").attr("show","yes");
+        //     }else{
+        //         $("#donate").html('<p>谢谢赞赏！</p>');
+        //         $("#donate").attr("show","no");
+        //     }
+        // }
+        // $('#donate1').on('click', function(){
+        //     donate();
+        // });
+        // $('#donate2').on('click', function(){
+        //     donate();
+        // });
+        // $('#btnCopy').on('click', function(){
+        //     if(!$.isEmptyObject(genCodeArea.getValue())&&!$.isEmptyObject(navigator)&&!$.isEmptyObject(navigator.clipboard)){
+        //         navigator.clipboard.writeText(genCodeArea.getValue());
+        //         $.toast("√ 复制成功");
+        //     }
+        // });
+        //
+        // function getVersion(){
+        //     var gitVersion ;
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: "https://raw.githubusercontent.com/moshowgame/SpringBootCodeGenerator/master/generator-web/src/main/resources/static/version.json",
+        //         dataType: "json",
+        //         success: function (data) {
+        //             gitVersion = data.version;
+        //             $.ajax({
+        //                 type: 'GET',
+        //                 url: base_url + "/static/version.json",
+        //                 dataType: "json",
+        //                 success: function (data) {
+        //                     $.toast("#当前版本:"+data.version+" | github:"+gitVersion);
+        //                 }
+        //             });
+        //         }
+        //     });
+        // }
+        // $('#version').on('click', function(){
+        //     getVersion();
+        // });
     });
 </script>
 </head>
@@ -229,15 +229,15 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">作者名称</span>
             </div>
-            <input type="text" class="form-control" id="authorName" name="authorName" value="zhengkai.blog.csdn.net">
+            <input type="text" class="form-control" id="authorName" name="authorName" value="产业平台xxx">
             <div class="input-group-prepend">
                 <span class="input-group-text">返回封装</span>
             </div>
             <input type="text" class="form-control" id="returnUtil" name="returnUtil" value="ReturnT">
             <div class="input-group-prepend">
-                <span class="input-group-text">包名路径</span>
+                <span class="input-group-text">模块名</span>
             </div>
-            <input type="text" class="form-control" id="packageName" name="packageName" value="com.softdev.system">
+            <input type="text" class="form-control" id="packageName" name="packageName" value="identity">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -246,8 +246,8 @@
             <select type="text" class="form-control" id="dataType"
                     name="dataType">
                 <option value="sql">ddl-sql</option>
-                <option value="json">json</option>
-                <option value="insert-sql">insert-sql</option>
+<#--                <option value="json">json</option>-->
+<#--                <option value="insert-sql">insert-sql</option>-->
                 <#--<option value="sql-regex">sql-regex</option>-->
             </select>
             <div class="input-group-prepend">
@@ -255,10 +255,10 @@
             </div>
             <select type="text" class="form-control" id="tinyintTransType"
                     name="tinyintTransType">
-                <option value="boolean">boolean</option>
-                <option value="Boolean">Boolean</option>
+<#--                <option value="boolean">boolean</option>-->
                 <option value="Integer">Integer</option>
-                <option value="int">int</option>
+                <option value="Boolean">Boolean</option>
+<#--                <option value="int">int</option>-->
                 <option value="String">String</option>
             </select>
             <div class="input-group-prepend">
@@ -267,7 +267,7 @@
             <select type="text" class="form-control" id="nameCaseType"
                     name="nameCaseType">
                 <option value="CamelCase">驼峰</option>
-                <option value="UnderScoreCase">下划线</option>
+<#--                <option value="UnderScoreCase">下划线</option>-->
                 <#--<option value="UpperUnderScoreCase">大写下划线</option>-->
             </select>
             <div class="input-group-prepend">
@@ -425,6 +425,6 @@ CREATE TABLE 'userinfo' (
     </div>
 </div>
 
-    <@netCommon.commonFooter />
+<#--    <@netCommon.commonFooter />-->
 </body>
 </html>

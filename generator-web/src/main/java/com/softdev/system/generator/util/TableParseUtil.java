@@ -249,6 +249,9 @@ public class TableParseUtil {
                     } else if (columnLine.contains(" boolean")) {
                         //20190910 MOSHOW.K.ZHENG 新增对boolean的处理（感谢@violinxsc的反馈）以及修复tinyint类型字段无法生成boolean类型问题（感谢@hahaYhui的反馈）
                         fieldClass = Boolean.class.getSimpleName();
+                    } else if (columnLine.contains(" bit")) {
+                        //20190910 MOSHOW.K.ZHENG 新增对boolean的处理（感谢@violinxsc的反馈）以及修复tinyint类型字段无法生成boolean类型问题（感谢@hahaYhui的反馈）
+                        fieldClass = Boolean.class.getSimpleName();
                     } else {
                         fieldClass = String.class.getSimpleName();
                     }
